@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <script>
+        function computerPlay(){
+            let options = ['rock', 'paper', 'scissors']
+            let roll = Math.floor(Math.random() * 3)
+            return options[roll]
+        }
+
+        function playRound(playerSelection, computerSelection) {
+            if (playerSelection == "rock") {
+                if (computerSelection == "paper"){
+                    computerScore++
+                    return "You lose!"
+                }
+                else if (computerSelection == "scissors") {
+                    playerScore++
+                    return "You win!"
+                }
+                else {
+                    return "Tie!"
+                }
+            }
+            else if (playerSelection == "paper"){
+                if (computerSelection == "scissors") {
+                    computerScore++
+                    return "You lose!"
+                }
+                else if (computerSelection == "rock") {
+                    playerScore++
+                    return "You win!"
+                }
+                else {
+                    return "Tie!"
+                }
+            }
+            else if (playerSelection == "scissors") {
+                if (computerSelection == "rock") {
+                    computerScore++
+                    return "You lose!"
+                }
+                else if (computerSelection == "paper"){
+                    playerScore++
+                    return "You win!"
+                }
+                else {
+                    return "Tie!"
+                }
+            }
+        }
+        
+        function playGame() {
+            for (let i = 0; i < 5; i++){
+                let playerSelection = prompt("Enter rock, paper, or scissors.")
+                console.log(playRound(playerSelection, computerPlay()))
+            }
+            return `Score: Player: ${playerScore}  Computer: ${computerScore}`
+
+        }
+
+        const playerSelection = prompt("Enter rock, paper, or scissors")
+        const computerSelection = computerPlay()
+        let playerScore = 0 
+        let computerScore = 0
+
+    </script>
+</body>
+</html>
