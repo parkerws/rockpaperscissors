@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <div id="wrap">
+    <div id="startScreen">
+        <h1>Rock Paper Scissors!</h1>
+        <p>How many rounds?</p>
+        <select name="rounds" id="rounds">
+            <option value="1">1</option>
+            <option value="3">3</option>
+            <option value="5">5</option>
+            <option value="7">7</option>
+        </select>
+        <button id="startGame">Start Game!</button>
+    </div>
+    
+    <div id="gameContainer" class="noShow">
+        
+        <div class="playerChoice">
+            <div class="choiceGroup">
+                <button class="playerButton" id="rock">Rock</button>
+        
+            </div>
+            <div class="choiceGroup">
+                <button class="playerButton" id="paper">Paper</button>
+                
+            </div>
+            <div class="choiceGroup">
+                <button class="playerButton" id="scissors">Scissors</button>
+                
+            </div>
+        </div>
+        <div class="results">
+            <h2 id="round">Round:</h2>
+            <h2 id="score">Score:</h2>
+            <p>Results:</p>
+            <div id="finalResult"></div>
+            <div id="selectionElement">
+                <div id="playerSelection" class="selectionItem">Player:</div>
+                <div id="computerSelection" class="selectionItem">CPU:</div>
+            </div>
+        </div>
+
+
+
+    </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script>
+        /*
+        let computerSelection = computerPlay()
+
+        function computerPlay(){
+            let options = ['rock', 'paper', 'scissors']
+            let roll = Math.floor(Math.random() * 3)
+            return options[roll]
+        }
+
+        function playRound(e) {
+            console.log(e.target)
+            
+            let computer = computerPlay();
+            let player = e.target;
+            let playerChoice = player.id;
+            //let playerChoice = document.getElementById('playerSelection')
+            let computerChoice = document.getElementById('computerSelection')
+            let result = document.getElementById('finalResult')
+            let playerPic = document.createElement('img').src = `${player.id}.jpeg`
+            let compPic = document.createElement('img').src = `${computer}.jpeg`
+            //playerChoice.appendChild(playerPic)
+            //computerChoice.appendChild(compPic)
+            let score = document.getElementById('score').textContent = `Player: ${playerScore} Computer: ${computerScore}`
+            console.log(computer)
+            console.log(playerScore)
+            console.log(computerScore)
+            
+            
+            if (player.id == "rock") {
+                if (computerSelection === "paper"){
+                    computerScore++
+                    result.innerText = ("You lose!")
+                }
+                else if (computerSelection === "scissors") {
+                    playerScore++
+                    result.innerText = ("You win!")
+                }
+                else {
+                    result.innerText = ("Tie!")
+                }
+            }
+            else if (player.id === "paper"){
+                if (computerSelection == "scissors") {
+                    computerScore++
+                    result.innerText = ("You lose!")
+                }
+                else if (computerSelection === "rock") {
+                    playerScore++
+                    result.innerText = ("You win!")
+                }
+                else {
+                    result.innerText = ("Tie!")
+                }
+            }
+            else if (player.id === "scissors") {
+                if (computerSelection === "rock") {
+                    computerScore++
+                    result.innerText = ("You lose!")
+                }
+                else if (computerSelection === "paper"){
+                    playerScore++
+                    result.innerText = ("You win!")
+                }
+                else {
+                    result.innerText = ("Tie!")
+                }
+            }
+
+        }
+        
+        function playGame(e) {
+            for (let i = 0; i < 5; i++){
+                let playerSelection = prompt("Enter rock, paper, or scissors.")
+                playRound(playerSelection, computerPlay())
+            }
+            return `Score: Player: ${playerScore}  Computer: ${computerScore}`
+
+        }
+
+    
+        let playerScore = 0 
+        let computerScore = 0
+
+        const buttons = document.querySelectorAll("button")
+        
+        buttons.forEach((button) => {
+            button.addEventListener('click', playRound)
+        })
+*/
+    </script>
+</body>
+</html>
